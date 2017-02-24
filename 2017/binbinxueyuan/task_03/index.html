@@ -71,7 +71,7 @@
       data.forEach(function (elt, index) {
         aqiContent += `<li>第${numbers[index]}名：${elt[0]}空气质量：<b>${elt[1]}</b></li>`
       })
-      document.getElementById('resort').innerHTML = aqiContent
+      $('resort').innerHTML = aqiContent
     }
 
     function btnHandle() {
