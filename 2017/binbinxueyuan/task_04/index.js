@@ -28,7 +28,7 @@ function update() {
  */
 function isUpdate() {
 
-  if (!Number.isInteger(+$('text').value) || $('text').value === '') {
+  if (!Number.isInteger(+$('text').value) || $('text').value.trim() === '') {
     alert('请输入整数！')
     return false
   }
