@@ -103,6 +103,10 @@ $('queue').addEventListener('click', function (e) {
 
 var snapshots = [] // 存储冒泡排序快照
 $('sort').addEventListener('click', function () {
+  if (queue.length === 0) {
+    return null
+  }
+
   $('left-in').disabled = true
   $('right-in').disabled = true
   $('left-out').disabled = true
