@@ -1,5 +1,5 @@
-var queue = [100, 90, 80, 70, 60, 50, 40, 30, 20, 10] // 存储队列的值
-update(queue)
+var queue = [] // 存储队列的值
+
 /**
  * 封装 document.getElementById 方法
  *
