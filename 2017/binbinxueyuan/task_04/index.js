@@ -23,7 +23,8 @@ function update() {
 }
 
 /**
- * 根据 input 输入框的值是否为整数
+ * 对输入值进行去空白符处理
+ * 根据 input 输入框的值是否为整数和空字符串
  * 来判断是否更新队列
  */
 function isUpdate() {
