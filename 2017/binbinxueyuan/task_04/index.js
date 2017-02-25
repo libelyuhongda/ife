@@ -28,8 +28,9 @@ function update() {
  * 来判断是否更新队列
  */
 function isUpdate() {
+  var value = $('text').value
 
-  if (!Number.isInteger(+$('text').value) || $('text').value.trim() === '') {
+  if (!Number.isInteger(+value) || value.trim() === '') {
     alert('请输入整数！')
     return false
   }
