@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>IFE JavaScript Task 06</title>
+  <style>
+    body {
+      margin: 10px;
+    }
+
+    #left-out {
+      margin-left: 30px;
+    }
+
+    .number {
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      color: #fff;
+      background: orangered;
+      border-radius: 5px;
+      float: left;
+      margin: 10px 10px 10px 0;
+      cursor: pointer;
+    }
+
+    .queue-btn {
+      margin: 30px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <textarea id="text" cols="30" rows="10"></textarea>
+  <div class="queue-btn">
+    <button id="left-in">左侧入</button>
+    <button id="right-in">右侧入</button>
+    <button id="left-out">左侧出</button>
+    <button id="right-out">右侧出</button>
+  </div>
+  <input type="text" id="query-text">
+  <button id="query-btn">查询</button>
+  <div id="queue"></div>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
