@@ -16,7 +16,7 @@ function update() {
   var str = ''
 
   queue.forEach(function (val) {
-    str += `<div class="number">${val}</div>`
+    str += `<div class="text">${val}</div>`
   })
   $('queue').innerHTML = str
   $('text').value = ''
@@ -27,10 +27,7 @@ function update() {
  *
  */
 function handleInput(str) {
-  var re = /[\s, ，、]+/
-  console.log(str.split(re))
-
-  return str.split(re).filter(function (val) {
+  return str.split(/[\s, ，、]+/).filter(function (val) {
     return val !== ''
   })
 }
@@ -46,15 +43,15 @@ function isUpdate(arr) {
 }
 
 /**
- * 获取子元素 (.number) 在父元素 (#queue) 中的下标
+ * 获取子元素 (.text) 在父元素 (#queue) 中的下标
  *
  */
 function getIndex(elt) {
-  var number = $('queue').children
+  var text = $('queue').children
 
-  for (var i = 0, len = number.length; i < len; i++) {
+  for (var i = 0, len = text.length; i < len; i++) {
 
-    if (number[i] === elt) {
+    if (text[i] === elt) {
       return i
     }
   }
@@ -68,8 +65,9 @@ function renderQueryText() {
   var str = ''
 
   queue.forEach(function (val) {
-    val = val.replace($('query-text').value, '<span style="color: black;">$&</span>')
-    str += `<div class="number">${val}</div>`
+    var re = new RegExp($('query-text').value, 'g')
+    val = val.replace(re, '<span style="color: black;">$&</span>')
+    str += `<div class="text">${val}</div>`
   })
   $('queue').innerHTML = str
   $('query-text').value = ''
@@ -113,7 +111,7 @@ $('right-out').addEventListener('click', function () {
 $('queue').addEventListener('click', function (e) {
   var target = e.target
 
-  if (target.className === 'number') {
+  if (target.className === 'text') {
     queue.splice(getIndex(target), 1)
   }
   update()
