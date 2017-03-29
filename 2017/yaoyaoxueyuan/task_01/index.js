@@ -17,10 +17,10 @@ function verify(str) {
 
   if (str === '') {
     content = '<p class="red">姓名不能为空</p>'
-    text.style.borderColor = '#acacac'
+    text.style.borderColor = '#e31930'
   } else if (length < 4 || length > 16) {
     content = '<p class="gray">必填，长度为4~16个字符</p>'
-    text.style.borderColor = '#e31930'
+    text.style.borderColor = '#acacac'
   } else {
     content = '<p class="green">名称格式正确</p>'
     text.style.borderColor = '#61b947'

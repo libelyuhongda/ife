@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>IFE JavaScript Task 02</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    main {
+      margin: 0 auto;
+      width: 387px;
+    }
+
+    label {
+      line-height: 30px;
+      display: block;
+      margin-top: 50px;
+      text-align: right;
+    }
+
+    .field {
+      float: left;
+    }
+
+    .input {
+      float: left;
+      margin-left: 20px;
+    }
+
+    input {
+      margin-top: 50px;
+      width: 300px;
+      height: 25px;
+      border-radius: 4px;
+      border: 2px solid #ccc;
+      position: relative;
+      display: block;
+    }
+
+    input:focus {
+      border-color: #66afe9;
+      outline: none;
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+    }
+
+    .success {
+      border-color: #5cb85c;
+    }
+
+    .error {
+      border-color: #fc1d1c;
+    }
+
+    p {
+      font-size: 12px;
+      position: absolute;
+    }
+
+    .success+p {
+      color: #5cb85c;
+    }
+
+    .error+p {
+      color: #fc1d1c;
+    }
+
+    .info {
+      color: #acacac;
+    }
+
+    button {
+      color: #fff;
+      background-color: #0275d8;
+      border-color: #0275d8;
+      width: 70px;
+      height: 30px;
+      border-radius: 5px;
+      display: block;
+      position: relative;
+      left: 317px;
+      top: 50px;
+      clear: both;
+    }
+
+    button:focus {
+      outline: 0;
+      box-shadow: 0 0 0 2px rgba(2, 117, 216, 0.5);
+    }
+
+    button:hover {
+      background-color: #025aa5;
+      border-color: #01549b;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="field">
+      <label for="text">名称</label>
+      <label for="password">密码</label>
+      <label for="confirm">密码确认</label>
+      <label for="email">邮箱</label>
+      <label for="tel">手机</label>
+    </div>
+    <div class="input">
+      <input type="text" id="text">
+      <input type="password" id="password">
+      <input type="password" id="confirm">
+      <input type="email" id="email">
+      <input type="tel" id="tel">
+    </div>
+    <button id="submit">提交</button>
+  </main>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
