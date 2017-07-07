@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>IFE JavaScript Task 03</title>
+  <style>
+  main {
+    text-align: center;
+  }
+
+  #student {
+    margin-bottom: 40px;
+  }
+
+  #cities {
+    margin-right: 20px;
+  }
+
+  #non-student {
+    margin-left: 20px;
+  }
+  </style>
+</head>
+
+<body>
+  <main>
+    <input type="radio" id="student" name="graduated" value="no" checked>
+    <label for="student">在校生</label>
+    <input type="radio" id="non-student" name="graduated" value="yes">
+    <label for="non-student">非在校生</label>
+    <div id="content">
+      <div id="selections">
+        <label for="cities">学校</label>
+        <select name="cities" id="cities">
+          <option value="广州">广州</option>
+          <option value="北京">北京</option>
+        </select>
+        <select name="schools" id="schools">
+          <option value="广州大学">广州大学</option>
+          <option value="广东工业大学">广东工业大学</option>
+        </select>
+      </div>
+    </div>
+  </main>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
