@@ -58,14 +58,17 @@ let deg = 0 // 存储当前旋转的角度
  * right: deg % 360 = 90
  */
 function getDirection() {
-  switch (Math.abs(deg % 360)) {
+  switch (deg % 360) {
     case 0:
       return 'up'
     case 180:
+    case -180:
       return 'down'
     case 270:
+    case -90:
       return 'left'
     case 90:
+    case -270:
       return 'right'
   }
 }
