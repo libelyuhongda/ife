@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>IFE JavaScript Task 05</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    #grid {
+      border: 2px solid #000;
+    }
+
+    #square {
+      border: 2px solid rgba(0, 0, 0, 0);
+    }
+
+    canvas {
+      position: absolute;
+      top: 50px;
+      left: 50%;
+      margin-left: -250px;
+    }
+
+    #text {
+      top: 0;
+      margin-left: -300px;
+      border: 2px solid rgba(0, 0, 0, 0);
+    }
+
+    #instruction {
+      margin: 600px 0 0 510px;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="grid" width="500" height="500"></canvas>
+  <canvas id="text" width="550" height="550"></canvas>
+  <canvas id="square" width="50" height="50"></canvas>
+  <select id="instruction" name="instruction">
+    <option value="go">GO</option>
+    <option value="turn-left">TUN LEF</option>
+    <option value="turn-right">TUN RIG</option>
+    <option value="turn-back">TUN BAC</option>
+    <option value="tra-left">TRA LEF</option>
+    <option value="tra-top">TRA TOP</option>
+    <option value="tra-right">TRA RIG</option>
+    <option value="tra-bottom">TRA BOT</option>
+    <option value="move-left">MOV LEF</option>
+    <option value="move-top">MOV TOP</option>
+    <option value="move-right">MOV RIG</option>
+    <option value="move-bottom">MOV BOT</option>
+  </select>
+  <button id="perform">执行</button>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
