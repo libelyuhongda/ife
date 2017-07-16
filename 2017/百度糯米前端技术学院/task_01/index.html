@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>自定义checkbox，radio样式</title>
+  <style>
+    input[type="radio"],
+    input[type="checkbox"] {
+      display: none;
+    }
+
+    label {
+      margin-right: 20px;
+      cursor: pointer;
+    }
+
+    #pseudo-elt input[type="radio"]+label {
+      position: relative;
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      border: 1px solid #d9d9d9;
+      border-radius: 50%;
+    }
+
+    #pseudo-elt input[type="radio"]:checked+label {
+      border: 1px solid #d73d32;
+    }
+
+    #pseudo-elt input[type="radio"]:checked+label::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-color: #d73d32;
+      border-radius: 50%;
+      background: #d73d32;
+    }
+
+    input[type="radio"]:disabled+label {
+      opacity: 0.65;
+      cursor: not-allowed;
+    }
+
+    #pseudo-elt input[type="checkbox"]+label {
+      position: relative;
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      border: 1px solid #d9d9d9;
+      border-radius: 4px;
+    }
+
+    #pseudo-elt input[type="checkbox"]:checked+label {
+      border: 1px solid #d73d32;
+    }
+
+    #pseudo-elt input[type="checkbox"]:checked+label::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 7px;
+      transform: translate(-50%, -50%) rotate(40deg);
+      display: inline-block;
+      width: 4px;
+      height: 11px;
+      border: 3px solid #d73d32;
+      border-top-width: 0;
+      border-left-width: 0;
+    }
+
+    input[type="checkbox"]:disabled+label {
+      cursor: not-allowed;
+      opacity: 0.65;
+    }
+
+    #background-img input[type="radio"]+label {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background-size: 50px 20px;
+      background-image: url('radio.png');
+    }
+
+    #background-img input[type="radio"]:checked+label {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background-size: 50px 20px;
+      background-image: url('radio.png');
+      background-position: -30px 0;
+    }
+
+    #background-img input[type="checkbox"]+label {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background-image: url('checkbox.png');
+      background-size: 50px 20px;
+    }
+
+    #background-img input[type="checkbox"]:checked+label {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background-image: url('checkbox.png');
+      background-size: 50px 20px;
+      background-position: -30px 0;
+    }
+
+    div {
+      width: 100px;
+      margin: 10px auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="pseudo-elt">伪元素实现：
+    <div class="radioes">
+      <input type="radio" id="radio" name="radio" checked>
+      <label for="radio"></label>
+      <input type="radio" id="radio2" name="radio">
+      <label for="radio2"></label>
+    </div>
+    <div class="checkboxes">
+      <input type="checkbox" id="checkbox" name="checkbox" checked>
+      <label for="checkbox"></label>
+      <input type="checkbox" id="checkbox2" name="checkbox">
+      <label for="checkbox2"></label>
+    </div>
+  </div>
+  <div id="background-img">背景图实现：
+    <div class="radioes">
+      <input type="radio" id="radio3" name="radio2" checked>
+      <label for="radio3"></label>
+      <input type="radio" id="radio4" name="radio2">
+      <label for="radio4"></label>
+    </div>
+    <div class="checkboxes">
+      <input type="checkbox" id="checkbox3" name="checkbox2" checked>
+      <label for="checkbox3"></label>
+      <input type="checkbox" id="checkbox4" name="checkbox2">
+      <label for="checkbox4"></label>
+    </div>
+  </div>
+
+</body>
+
+</html>
