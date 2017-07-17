@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>自定义网页右键菜单</title>
+  <style>
+    ul {
+      margin: 0;
+    }
+
+    #custom-menu {
+      text-align: center;
+      padding: 0;
+      display: none;
+      position: absolute;
+      list-style-type: none;
+      width: 100px;
+      box-shadow: 2px 2px 2px #ccc;
+      border: 1px solid #bbb;
+    }
+
+    li {
+      line-height: 30px;
+      cursor: default;
+    }
+
+    li:hover {
+      background: #eee;
+    }
+  </style>
+</head>
+
+<body>
+  <ul id="custom-menu">
+    <li>菜单一</li>
+    <li>菜单二</li>
+    <li>菜单三</li>
+    <li>菜单四</li>
+    <li>菜单五</li>
+    <li>菜单六</li>
+  </ul>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
