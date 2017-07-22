@@ -1,4 +1,4 @@
-// 动态数据绑定（三）
+// 动态数据绑定（四）
 
 class Observer {
   constructor(data, vm) {
@@ -61,19 +61,42 @@ function observe(vm, val) {
   }
 }
 
-let app = new Observer({
-  name: {
-    firstName: 'shaofeng',
-    lastName: 'liang'
-  },
-  age: 25
-})
+class Vue {
+  constructor(options) {
+    this.$options = options
+    this.$el = options.el
+    this.$data = options.data
+    this.render()
+  }
 
-app.$watch('name', function (newName) {
-  console.log('我的姓名发生了变化，可能是姓氏变了，也可能是名字变了。')
-})
+  render() {
+    const el = document.querySelector(this.$el)
+    const childElts = el.children
 
-app.data.name.firstName = 'hahaha'
-// 输出：我的姓名发生了变化，可能是姓氏变了，也可能是名字变了。
-app.data.name.lastName = 'blablabla'
-// 输出：我的姓名发生了变化，可能是姓氏变了，也可能是名字变了。
+    for (let i = 0; i < childElts.length; i++) {
+      this.compile(childElts[i])
+    }
+  }
+
+  compile(elt) {
+    if (elt.children.length) {
+      for (let i = 0; i < elt.children.length; i++) {
+        this.compile(elt.children[i])
+      }
+    }
+
+    elt.textContent = elt.textContent.replace(/{{\s*([\w$]+)\.([\w$]+)\s*}}/, (match, p1, p2) => {
+      return this.$data[p1][p2]
+    })
+  }
+}
+
+let app = new Vue({
+  el: '#app',
+  data: {
+    user: {
+      name: 'youngwind',
+      age: 25
+    }
+  }
+})
