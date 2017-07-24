@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS3饼状loading效果</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      width: 40px;
+      height: 40px;
+
+      transform: translate(-50%, -50%);
+    }
+
+    .loading {
+      position: absolute;
+      z-index: 3;
+      top: 50%;
+      left: 50%;
+
+      width: 60px;
+      height: 60px;
+
+      animation: loading 0.5s linear infinite;
+
+      border: 2px solid #ff54a3;
+      border-top-color: transparent;
+      border-radius: 50%;
+    }
+
+    @keyframes loading {
+      0% {
+        transform: translate(-50%, -50%) rotate(360deg);
+      }
+      100% {
+        transform: translate(-50%, -50%) rotate(0);
+      }
+    }
+
+    .circle {
+      width: 0;
+      height: 0;
+
+      transform: rotate(45deg);
+
+      border: 20px solid;
+      border-top-color: #ff54a3;
+      border-right-color: #ff54a3;
+      border-bottom-color: #fca2ca;
+      border-left-color: #fca2ca;
+      border-radius: 20px;
+    }
+
+    .semicircle {
+      position: absolute;
+      top: 0;
+
+      width: 20px;
+      height: 40px;
+
+      transform-origin: 20px 20px;
+
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+
+    .semicircle-one {
+      animation: rotation-one 1s linear infinite forwards;
+
+      background: #fca2ca;
+    }
+
+    .semicircle-two {
+      animation: rotation-two 1s linear infinite forwards;
+
+      background: #ff54a3;
+    }
+
+    @keyframes rotation-one {
+      0%,
+      24.999% {
+        z-index: -1;
+
+        transform: rotate(0);
+      }
+      25% {
+        z-index: 2;
+
+        transform: rotate(0);
+      }
+      50%,
+      74.999% {
+        z-index: 2;
+
+        transform: rotate(-180deg);
+      }
+      75% {
+        z-index: 0;
+
+        transform: rotate(-180deg);
+      }
+      100% {
+        z-index: 0;
+
+        transform: rotate(-360deg);
+      }
+    }
+
+    @keyframes rotation-two {
+      0% {
+        transform: rotate(0);
+      }
+      25%,
+      50% {
+        transform: rotate(-180deg);
+      }
+      75%,
+      100% {
+        transform: rotate(-360deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="loading"></div>
+    <div class="circle"></div>
+    <div class="semicircle-one semicircle"></div>
+    <div class="semicircle-two semicircle"></div>
+  </div>
+</body>
+
+</html>
