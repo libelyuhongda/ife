@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>仿豆瓣音乐播放器</title>
+
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_39r1edm440hyf1or.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <table>
+    <tr>
+      <th>歌曲</th>
+      <th>歌手</th>
+      <th>时长</th>
+    </tr>
+  </table>
+  <div class="cover">
+    <img>
+  </div>
+  <div class="controls">
+    <div class="details">
+      <img width="56">
+      <p class="song">狐言</p>
+      <p class="artist">河图/洛天依</p>
+    </div>
+    <div class="player-controls">
+      <i class="iconfont icon-prev prev"></i>
+      <i class="iconfont icon-play play"></i>
+      <i class="iconfont icon-next next"></i>
+    </div>
+    <div class="progress-container">
+      <span class="progress-time elapsed-time">0:00</span>
+      <div class="progress-bar">
+        <div class="elapsed">
+          <div class="handle"></div>
+        </div>
+      </div>
+      <span class="progress-time track-length"></span>
+    </div>
+    <div class="controls-right">
+      <i class="iconfont icon-loop loop"></i>
+      <i class="iconfont icon-volume-up volume"></i>
+      <div class="volume-bar">
+        <div class="volume-level">
+          <div class="handle"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
