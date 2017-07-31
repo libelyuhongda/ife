@@ -1,0 +1,10 @@
+body {
+    margin: 0;
+}
+
+#tree {
+    width: 800px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 100px auto;
+}
