@@ -1,0 +1,11 @@
+b {
+  margin-right: 10px;
+}
+
+span {
+  margin-right: 40px;
+}
+
+.item:nth-child(n + 3) span {
+  display: block;
+}

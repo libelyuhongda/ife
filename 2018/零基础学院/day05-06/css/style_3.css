@@ -1,0 +1,49 @@
+.container {
+  border: 1px solid #ccc;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.item {
+  width: 100%;
+  height: 120px;
+  border-bottom: 1px solid #ccc;
+}
+
+.title {
+  color: #fff;
+  background: #858585;
+  margin: 0;
+  font-size: 30px;
+  padding: 20px;
+}
+
+h2 {
+  background: #d6d6d6;
+  text-align: center;
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  float: left;
+  margin: 0;
+  font-size: 20px;
+}
+
+.content {
+  height: 100%;
+  float: left;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+b {
+  margin-right: 10px;
+}
+
+span {
+  margin-right: 40px;
+}
+
+p {
+  margin: 0;
+}
