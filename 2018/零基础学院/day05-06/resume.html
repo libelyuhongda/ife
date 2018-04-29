@@ -2,12 +2,37 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>第五天和第六天 三种简历</title>
+  <title>第五天和第六天：三种简历</title>
   <!-- <link rel="stylesheet" href="css/style_1.css"> -->
   <!-- <link rel="stylesheet" href="css/style_2.css"> -->
   <link rel="stylesheet" href="css/style_3.css">
+  <script>
+    window.onload = function () {
+      const change = document.getElementsByClassName('change-style')[0]
+      const styleOne = document.getElementById('style-one')
+      const styleTwo = document.getElementById('style-two')
+      const styleThree = document.getElementById('style-three')
+      const styleSheet = document.getElementsByTagName('link')[0]
+
+      change.onclick = function (e) {
+        if (e.target === styleOne) {
+          styleSheet.href = 'css/style_1.css'
+        } else if (e.target === styleTwo) {
+          styleSheet.href = 'css/style_2.css'
+        } else if (e.target === styleThree) {
+          styleSheet.href = 'css/style_3.css'
+        }
+      }
+    }
+  </script>
 </head>
 <body>
+  <div class="change-style">
+    切换样式：
+    <button id="style-one">style_1.css</button>
+    <button id="style-two">style_2.css</button>
+    <button id="style-three">style_3.css</button>
+  </div>
   <div class="container">
     <h1 class="title">简历</h1>
 
