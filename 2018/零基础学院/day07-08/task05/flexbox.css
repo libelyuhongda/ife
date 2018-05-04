@@ -1,0 +1,26 @@
+.container {
+  width: 60%;
+  margin: 100px auto;
+  border: 2px dashed gray;
+  display: flex;
+}
+
+.main {
+  width: 300px;
+  height: 300px;
+  flex: none;
+  background: lightgray;
+}
+
+.left {
+  width: 200px;
+  height: 300px;
+  flex: none;
+  background: lawngreen;
+}
+
+.right {
+  height: 300px;
+  flex: auto;
+  background: lightcoral;
+}

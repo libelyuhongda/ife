@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-flow: row-reverse;
+  width: 60%;
+  margin: 100px auto;
+  border: 2px dashed gray;
+}
+
+.left {
+  height: 300px;
+  margin-right: 20px;
+  flex: auto;
+  background: lawngreen;
+}
+
+.right {
+  width: 250px;
+  height: 300px;
+  flex: none;
+  background: lightcoral;
+}

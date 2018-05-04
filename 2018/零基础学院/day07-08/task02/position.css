@@ -1,0 +1,18 @@
+.container {
+  width: 60%;
+  margin: 100px auto;
+  border: 2px dashed gray;
+}
+
+.left {
+  width: 250px;
+  height: 300px;
+  position: absolute;
+  background: lawngreen;
+}
+
+.right {
+  height: 300px;
+  margin-left: 270px;
+  background: lightcoral;
+}

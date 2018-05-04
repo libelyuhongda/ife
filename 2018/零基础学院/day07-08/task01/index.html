@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>第七天到第八天：学习布局</title>
+  <style>
+    .change-layout {
+      text-align: center;
+      height: 60px;
+      line-height: 60px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    button {
+      font-size: 18px;
+      height: 30px;
+      margin-right: 20px;
+      width: 120px;
+    }
+
+  </style>
+  <link rel="stylesheet" href="float.css">
+  <!-- <link rel="stylesheet" href="position.css"> -->
+  <!-- <link rel="stylesheet" href="flexbox.css"> -->
+</head>
+<body>
+  <!-- 切换不同实现方式 -->
+  <div class="change-layout">
+    切换实现方式：
+    <button id="layout-one">float</button>
+    <button id="layout-two">position</button>
+    <button id="layout-three">flexbox</button>
+  </div>
+
+  <!-- 任务代码 -->
+  <div class="container">
+    <div class="left">left</div>
+    <div class="right">right</div>
+  </div>
+
+  <!-- 切换不同实现方式的逻辑 -->
+  <script>
+    const change = document.getElementsByClassName('change-layout')[0]
+    const layoutOne = document.getElementById('layout-one')
+    const layoutTwo = document.getElementById('layout-two')
+    const layoutThree = document.getElementById('layout-three')
+    const styleSheet = document.getElementsByTagName('link')[0]
+
+    change.onclick = function (e) {
+      if (e.target === layoutOne) {
+        styleSheet.href = 'float.css'
+      } else if (e.target === layoutTwo) {
+        styleSheet.href = 'position.css'
+      } else if (e.target === layoutThree) {
+        styleSheet.href = 'flexbox.css'
+      }
+    }
+  </script>
+</body>
+</html>

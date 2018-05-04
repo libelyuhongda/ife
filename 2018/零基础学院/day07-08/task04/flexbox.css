@@ -1,0 +1,28 @@
+.container {
+  width: 60%;
+  margin: 100px auto;
+  border: 2px dashed gray;
+  display: flex;
+}
+
+.main {
+  height: 300px;
+  flex: auto;
+  background: lightgray;
+}
+
+.left {
+  width: 200px;
+  height: 300px;
+  flex: none;
+  order: -1;
+  background: lawngreen;
+}
+
+.right {
+  width: 150px;
+  height: 300px;
+  flex: none;
+  order: 1;
+  background: lightcoral;
+}

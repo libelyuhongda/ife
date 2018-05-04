@@ -1,0 +1,30 @@
+.container {
+  width: 60%;
+  margin: 100px auto;
+  border: 2px dashed gray;
+  position: relative;
+}
+
+.main {
+  height: 300px;
+  margin: 0 150px 0 200px;
+  background: lightgray;
+}
+
+.left {
+  width: 200px;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: lawngreen;
+}
+
+.right {
+  width: 150px;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: lightcoral;
+}

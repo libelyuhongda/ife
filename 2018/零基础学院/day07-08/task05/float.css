@@ -1,0 +1,26 @@
+.container {
+  width: 60%;
+  margin: 100px auto;
+  border: 2px dashed gray;
+  overflow: hidden;
+}
+
+.main {
+  width: 300px;
+  height: 300px;
+  float: left;
+  background: lightgray;
+}
+
+.left {
+  float: left;
+  width: 200px;
+  height: 300px;
+  background: lawngreen;
+}
+
+.right {
+  height: 300px;
+  overflow: hidden;
+  background: lightcoral;
+}
