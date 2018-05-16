@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>IFE ECMAScript</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    div {
+      width: 480px;
+      height: 480px;
+      background: url('erik_ce204002.jpg');
+    }
+
+  </style>
+</head>
+<body>
+  <div></div>
+  <script>
+    var div = document.getElementsByTagName('div')[0]
+
+    div.style.backgroundPositionY = 0
+
+    setInterval(() => {
+      if (div.style.backgroundPositionY === "8160px") {
+        div.style.backgroundPositionY = 0
+      }
+      div.style.backgroundPositionY = Number.parseInt(div.style.backgroundPositionY) + 480 + 'px'
+    }, 200)
+  </script>
+</body>
+</html>
