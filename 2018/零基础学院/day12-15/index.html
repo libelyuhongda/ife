@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>第十二天到第十五天：复杂页面实现</title>
+  <link rel="stylesheet" href="styles/iconfont.css">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <nav id="menu">
+    <div class="menu-primary">
+      <button class="menu-btn menu-btn-share icon-item01 active"></button>
+      <button class="menu-btn menu-btn-speedup icon-item02"></button>
+      <button class="menu-btn menu-btn-game icon-item03"></button>
+      <button class="menu-btn menu-btn-add icon-add"></button>
+      <span class="tool-btn icon-grid"></span>
+      <span class="tool-btn icon-settings"></span>
+    </div>
+    <div class="menu-secondary">
+      <div>
+        <div class="menu-list-wrapper">
+          <h3 class="menu-title">Menu
+            <span class="tool-btn icon-settings"></span>
+          </h3>
+          <ul class="menu-list">
+            <li class="menu-item">Overview</li>
+            <li class="menu-item">Sales
+              <span class="badge">54</span>
+            </li>
+            <li class="menu-item">Your Staff</li>
+            <li class="menu-item">Analytics & Targeting</li>
+            <li class="menu-item">What’s New</li>
+          </ul>
+        </div>
+        <hr class="divider">
+        <div class="menu-list-wrapper">
+          <h3 class="menu-title">Your Products
+            <span class="tool-btn icon-settings"></span>
+          </h3>
+          <ul class="menu-list">
+            <li class="menu-item">
+              <span class="icon-book"></span>Books</li>
+            <li class="menu-item">
+              <span class="icon-camera"></span>Tutorials</li>
+            <li class="menu-item">
+              <span class="icon-painting"></span>Stocks</li>
+            <li class="menu-item">
+              <span class="icon-chart"></span>Infographics</li>
+          </ul>
+        </div>
+        <hr class="divider">
+        <div class="menu-list-wrapper">
+          <h3 class="menu-title">Dashboard
+            <span class="tool-btn icon-settings"></span>
+          </h3>
+          <ul class="menu-list">
+            <li class="menu-item active">Messages
+              <span class="badge">21</span>
+            </li>
+            <li class="menu-item">Connections</li>
+            <li class="menu-item">Integrations
+              <span class="badge badge-warning">!</span>
+            </li>
+            <li class="menu-item">Account Settings</li>
+            <li class="menu-item">App Settings</li>
+          </ul>
+        </div>
+      </div>
+      <div class="monthly-goals">
+        <p>
+          <span>Monthly Goals</span>
+          <span>$580/$3200</span>
+        </p>
+        <div class="total">
+          <div class="fill"></div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <main id="chat">
+    <header class="message-header">
+      <h2>Messages</h2>
+      <div class="profile current">
+        <img src="images/avatar07.jpg" class="avatar">
+        <div class="name">
+          <p>Jordan J.</p>
+          <p>Administrator</p>
+        </div>
+      </div>
+      <span class="icon-dropdown"></span>
+    </header>
+    <div class="message-content">
+      <section class="chatlist-wrapper">
+        <div class="search-wrapper">
+          <input class="search" type="search" placeholder="Search">
+          <span class="icon-search"></span>
+        </div>
+        <ul class="message-list">
+          <li class="message-item current">
+            <div class="profile">
+              <img src="images/avatar01.jpg" class="avatar">
+              <div class="name">
+                <p>Bessie Berry</p>
+                <p>Twitter</p>
+              </div>
+            </div>
+            <span class="pubtime">3m</span>
+            <p class="message-text">I pay for the 4Mb/sec down, 512 Kb/sec up service from O2. In fact, it's
+              relatively quick, and stable...</p>
+            <span class="badge badge-circle">4</span>
+          </li>
+          <li class="message-item">
+            <div class="profile">
+              <img src="images/avatar02.jpg" class="avatar">
+              <div class="name">
+                <p>Victor Weber</p>
+                <p>Adobe</p>
+              </div>
+            </div>
+            <span class="pubtime">8m</span>
+            <p class="message-text">I shared this on my fb wall a few months back, and I thought I'd share
+              it here again because it's such a great...</p>
+          </li>
+          <li class="message-item">
+            <div class="profile">
+              <img src="images/avatar03.jpg" class="avatar">
+              <div class="name">
+                <p>Dustin Benson</p>
+                <p>Facebook</p>
+              </div>
+            </div>
+            <span class="pubtime">Yesterday</span>
+            <p class="message-text">If there is anyone who needs an invitation please add yourself in the
+              comments of this post!</p>
+          </li>
+          <li class="message-item">
+            <div class="profile">
+              <img src="images/avatar04.jpg" class="avatar">
+              <div class="name">
+                <p>Jack Mason</p>
+                <p>Yahoo</p>
+              </div>
+            </div>
+            <span class="pubtime">Yesterday</span>
+            <p class="message-text">BruteDC is a peer-to-peer movie+tv series sharing and downloading platform
+              which works on intranet inside...</p>
+          </li>
+          <li class="message-item">
+            <div class="profile">
+              <img src="images/avatar05.jpg" class="avatar">
+              <div class="name">
+                <p>Stephen Shelton</p>
+                <p>Snapchat</p>
+              </div>
+            </div>
+            <span class="pubtime">13 Jun</span>
+            <p class="message-text">Yes, p2p traffic is often filtered (QoSed). Although i do use BT on O2
+              wires, and in good days dl speed...</p>
+          </li>
+          <li class="message-item">
+            <div class="profile">
+              <img src="images/avatar06.jpg" class="avatar">
+              <div class="name">
+                <p>Sally Willis</p>
+                <p>Twitter</p>
+              </div>
+            </div>
+            <span class="pubtime">12 Jun</span>
+            <p class="message-text">I pay for the 4Mb/sec down, 512 Kb/sec up service from O2. In fact, it's
+              relatively quick, and stable...</p>
+          </li>
+        </ul>
+      </section>
+      <section class="opened-chatlist-wrapper">
+        <div class="toolbar">
+          <h3>Bessie Berry</h3>
+          <div class="toolbar-btn">
+            <div class="btn-group">
+              <button class="icon-user"></button>
+              <button class="icon-upload"></button>
+              <button class="icon-trash"></button>
+            </div>
+            <div class="divider-vertical"></div>
+            <span>1 of 28</span>
+            <div class="btn-group">
+              <button class="icon-arrow-left"></button>
+              <button class="icon-arrow-right"></button>
+            </div>
+          </div>
+        </div>
+        <div class="opened-messege-list">
+          <div class="opened-message-item">
+            <img src="images/avatar01.jpg" class="avatar">
+            <div class="opened-message-text">
+              <p>
+                <span>Bessie Berry</span>
+                <span>8:31 AM</span>
+              </p>
+              <p>Hi guys Ive got the O2 package and have really slow internet. A speed
+                check online said i can get 3mbps but it seems more like 0.5 these
+                days, just freezing and taking ages to open pages and open audio
+                files for example. I have decided to switch to the UPC package which
+                offers 10mbps but do you think i will get it?</p>
+            </div>
+          </div>
+          <div class="opened-message-item">
+            <img src="images/avatar07.jpg" class="avatar">
+            <div class="opened-message-text">
+              <p>
+                <span>Jordan Jackson</span>
+                <span>8:31 AM</span>
+              </p>
+              <p>I have internet for 9 month and nevere could benefit from the full
+                capacity of 5Mbit/s as it is filtered by O2 when it detect traffic
+                on public p2p sharing in my situation all my internet speed slows
+                to 512Kbit/s. I never had 400KB/s on when downloading from p2p public
+                servers like torrent emule etc. I downoad with 500KB/s from private
+                trakers instead. So conlcusion O2 block trafic on p2p connections.
+                I have made hundreds of test in Italy and Sweden and Romania with
+                the same file to doanload with the same setting and same antivirus
+                and just needed to open ports in firewall and forward same ports
+                and the speed was at full capacity in 1 minute. here in 9 month never
+                had this luck.</p>
+            </div>
+          </div>
+          <div class="divider-wrapper">
+            <span class="divider"></span>
+            <span class="divider-text">Tuesday</span>
+            <span class="divider"></span>
+          </div>
+          <div class="opened-message-item">
+            <img src="images/avatar01.jpg" class="avatar">
+            <div class="opened-message-text">
+              <p>
+                <span>Bessie Berry</span>
+                <span>8:31 AM</span>
+              </p>
+              <p>Hi guys Ive got the O2 package and have really slow internet. A speed
+                check online said i can get 3mbps but it seems more like 0.5 these
+                days, just freezing and taking ages to open pages and open audio
+                files for example. I have decided to switch to the UPC package which
+                offers 10mbps but do you think i will get it?</p>
+            </div>
+          </div>
+          <div class="opened-message-item">
+            <img src="images/avatar07.jpg" class="avatar">
+            <div class="opened-message-text">
+              <p>
+                <span>Jordan Jackson</span>
+                <span>8:31 AM</span>
+              </p>
+              <p>I have internet for 9 month and nevere could benefit from the full
+                capacity of 5Mbit/s as it is filtered by O2 when it detect traffic
+                on public p2p sharing in my situation all my internet speed slows
+                to 512Kbit/s. I never had 400KB/s on when downloading from p2p public
+                servers like torrent emule etc. I downoad with 500KB/s from private
+                trakers instead. So conlcusion O2 block trafic on p2p connections.
+                I have made hundreds of test in Italy and Sweden and Romania with
+                the same file to doanload with the same setting and same antivirus
+                and just needed to open ports in firewall and forward same ports
+                and the speed was at full capacity in 1 minute. here in 9 month never
+                had this luck.</p>
+                <div class="opened-message-img">
+                  <img src="images/photo01.jpg" width="156" height="100">
+                  <img src="images/photo02.jpg" width="156" height="100">
+                </div>
+            </div>
+          </div>
+          <div class="divider-wrapper">
+            <span class="divider divider-blue"></span>
+            <span class="divider-text">New Messages</span>
+            <span class="divider divider-blue"></span>
+          </div>
+          <div class="opened-message-item">
+            <img src="images/avatar07.jpg" class="avatar">
+            <div class="opened-message-text">
+              <p>
+                <span>Jordan Jackson</span>
+                <span>8:31 AM</span>
+              </p>
+              <p>I have internet for 9 month and nevere could benefit from the full
+                capacity of 5Mbit/s as it is filtered by O2 when it detect traffic
+                on public p2p sharing in my situation all my internet speed slows
+                to 512Kbit/s. I never had 400KB/s on when downloading from p2p public
+                servers like torrent emule etc. I downoad with 500KB/s from private
+                trakers instead. So conlcusion O2 block trafic on p2p connections.
+                I have made hundreds of test in Italy and Sweden and Romania with
+                the same file to doanload with the same setting and same antivirus
+                and just needed to open ports in firewall and forward same ports
+                and the speed was at full capacity in 1 minute. here in 9 month never
+                had this luck.</p>
+            </div>
+          </div>
+        </div>
+        <div class="add-input-wrapper">
+          <button class="icon-add"></button>
+          <input type="text">
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

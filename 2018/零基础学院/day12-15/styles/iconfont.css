@@ -1,0 +1,78 @@
+@font-face {
+  font-family: 'iconfont';
+  font-weight: normal;
+  font-style: normal;
+
+  src: url('../fonts/iconfont.ttf?wf9ck6') format('truetype'),
+    url('../fonts/iconfont.woff?wf9ck6') format('woff'),
+    url('../fonts/iconfont.svg?wf9ck6#iconfont') format('svg');
+}
+
+[class^='icon-'],
+[class*=' icon-'] {
+  text-transform: none;
+  /* use !important to prevent issues with browser extensions that change fonts */
+
+  font-family: 'iconfont' !important;
+  font-weight: normal;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+
+  speak: none;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-book:before {
+  content: '\e90d';
+}
+.icon-camera:before {
+  content: '\e90e';
+}
+.icon-chart:before {
+  content: '\e90f';
+}
+.icon-painting:before {
+  content: '\e910';
+}
+.icon-item02:before {
+  content: '\e900';
+}
+.icon-item03:before {
+  content: '\e901';
+}
+.icon-item01:before {
+  content: '\e902';
+}
+.icon-upload:before {
+  content: '\e903';
+}
+.icon-add:before {
+  content: '\e904';
+}
+.icon-dropdown:before {
+  content: '\e905';
+}
+.icon-arrow-left:before {
+  content: '\e906';
+}
+.icon-arrow-right:before {
+  content: '\e907';
+}
+.icon-grid:before {
+  content: '\e908';
+}
+.icon-search:before {
+  content: '\e909';
+}
+.icon-settings:before {
+  content: '\e90a';
+}
+.icon-trash:before {
+  content: '\e90b';
+}
+.icon-user:before {
+  content: '\e90c';
+}
