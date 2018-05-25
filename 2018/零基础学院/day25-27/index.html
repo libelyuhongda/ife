@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>IFE ECMAScript</title>
+</head>
+<body>
+  <select id="year-select"></select>
+  <select id="month-select"></select>
+  <select id="day-select"></select>
+  <select id="hour-select"></select>
+  <select id="minute-select"></select>
+  <select id="second-select"></select>
+
+  <p id="result-wrapper">现在距离 2001年1月1日星期X HH:MM:SS 还有 X 天 X 小时 X 分 X 秒</p>
+
+  <script>
+    var resultWrapper = document.getElementById('result-wrapper')
+    var yearSelect = document.getElementById('year-select')
+    var monthSelect = document.getElementById('month-select')
+    var daySelect = document.getElementById('day-select')
+    var hourSelect = document.getElementById('hour-select')
+    var minuteSelect = document.getElementById('minute-select')
+    var secondSelect = document.getElementById('second-select')
+
+    // 判断是否为闰年
+    function isLeapYear(year) {
+      return (year % 4 == 0) && (year % 100 !== 0) || (year % 400 == 0)
+    }
+
+    // 渲染 option
+    function renderTimeOption(minTime, maxTime, el) {
+      for (let i = minTime; i <= maxTime; i++) {
+        let option = document.createElement('option')
+
+        option.text = i
+        option.value = i
+        el.add(option, null)
+      }
+    }
+
+    function renderOptions() {
+      renderTimeOption(1970, 2100, yearSelect)
+      renderTimeOption(1, 12, monthSelect)
+      renderTimeOption(0, 23, hourSelect)
+      renderTimeOption(0, 59, minuteSelect)
+      renderTimeOption(0, 59, secondSelect)
+    }
+
+    // 当用户选择是更新日期
+    function updateDateOption() {
+      var solarMonth = [1, 3, 5, 7, 8, 10, 12]
+      var lunarMonth = [4, 6, 9, 11]
+      var maxDate
+      var monthValue = +monthSelect.value
+
+      if (solarMonth.includes(monthValue)) {
+        maxDate = 31
+      } else if (lunarMonth.includes(monthValue)) {
+        maxDate = 30
+      } else if (isLeapYear(yearSelect.value)) {
+        maxDate = 29
+      } else {
+        maxDate = 28
+      }
+
+      renderTimeOption(1, maxDate, daySelect)
+    }
+
+    renderOptions()
+    updateDateOption()
+
+    function getDay(num) {
+      var mapDays = ['日', '一', '二', '三', '四', '五', '六']
+
+      return mapDays[num]
+    }
+
+    function longify(num) {
+      return num < 10 ? '0' + num : num
+    }
+
+    // 获取时间字符串
+    function format(milliseconds) {
+      var now = new Date(milliseconds)
+      var year = now.getFullYear()
+      var month = longify(now.getMonth() + 1)
+      var date = longify(now.getDate())
+      var day = getDay(now.getDay())
+      var hours = longify(now.getHours())
+      var minutes = longify(now.getMinutes())
+      var seconds = longify(now.getSeconds())
+      var dateTimeStr = `${year}年${month}月${date}日星期${day} ${hours}:${minutes}:${seconds}`
+
+      return dateTimeStr
+    }
+
+    // 获取时间对应的毫秒数
+    function getMilliseconds(str) {
+      var year = yearSelect.value
+      var month = monthSelect.value
+      var date = daySelect.value
+      var hours = hourSelect.value
+      var minutes = minuteSelect.value
+      var seconds = secondSelect.value
+
+      return Date.parse(`${year}-${month}-${date} ${hours}:${minutes}:${seconds}`)
+    }
+
+    // 计算时差
+    function calcDeltaTime(milliseconds) {
+      var deltaTime = Math.abs(Date.now() - milliseconds)
+      var deltaDate = Math.floor(deltaTime / (24 * 60 * 60 * 1000))
+      var rest = deltaTime % (24 * 60 * 60 * 1000)
+      var deltaHours = Math.floor(rest / (60 * 60 * 1000))
+
+      rest = rest % (60 * 60 * 1000)
+
+      var deltaMinutes = Math.floor(rest / (60 * 1000))
+      var deltaSeconds = Math.floor(rest / 1000)
+
+      return `${deltaDate}天${deltaHours}小时${deltaMinutes}分${deltaSeconds}秒`
+    }
+
+    function updateResult() {
+      resultWrapper.textContent = `现在距离 ${format(getMilliseconds())} ${Date.now() - getMilliseconds() > 0 ? '已经过去' : '还有'} ${calcDeltaTime(getMilliseconds())}`
+    }
+
+    document.body.onchange = function () {
+      updateResult()
+      updateDateOption()
+    }
+  </script>
+</body>
+</html>
